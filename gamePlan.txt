@@ -1,0 +1,31 @@
+Game Plan
+
+Firstly I'm just going to think about the game itself. In other words I'm going to ignore things like the collection, or the menu page. Maybe I'll tackle them in the future (if I ever finish the game itself) but it's significantly less interesting to me at any rate.
+
+Within the game there are 2 players and a board.
+Each player has:
+  A character
+  A deck
+  Their side of the board (handled by board?)
+  A hand
+Should the board be handled by player, or should it be its own entity?
+I think OOP best practices suggest that board should be its own entity.
+
+The board has:
+  Two halves, with 7 slots for minions each.
+  The minion count could be an Array (constant size, position matters).
+  Or should it be a linked list capped to 7 (since minions can be moved around easily)?
+
+A deck has:
+  Initially 30 cards.
+  Draws remove a card from the deck and adds it to the hand.
+
+All cards have: (Card as an abstract class)
+  A mana cost (Even if it is 0)
+  Card text (Even if it is blank)
+  A portrait (not as important for me)
+  A category (Minion, Weapon or Spell) <- subclasses
+  A class (As in Shaman, Warlock, Neutral, etc)
+
+A hand has:
+  Up to 10 cards, stored as a linked list?
