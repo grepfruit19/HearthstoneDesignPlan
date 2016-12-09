@@ -11,5 +11,5 @@ public abstract Class Card{
   //When card is played.
   abstract void play();
 
-  
+  abstract discardCard();
 }
