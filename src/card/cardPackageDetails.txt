@@ -1,0 +1,2 @@
+This package contains all cards, except for minions.
+Minions are contained in package character.

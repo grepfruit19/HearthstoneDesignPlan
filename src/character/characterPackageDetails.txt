@@ -1,0 +1,2 @@
+This package handles all characters in the game.
+Characters are defined as something that can be attacked or attack.

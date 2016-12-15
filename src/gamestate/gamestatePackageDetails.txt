@@ -1,0 +1,2 @@
+This package contains anything related to the game state.
+This includes things like the game, win conditions, data required to start the game.

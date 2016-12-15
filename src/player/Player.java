@@ -1,5 +1,14 @@
 package gamestate;
 
+//This class corresponds to a player and all the entities that
+//they control.
+
+//TODO: Set up command pattern to handle queued actions.
+/*
+Maybe Player creates command objects and sends them to the command queue
+Command queue handles them one at a time.
+*/
+
 public Class Player{
   public Game game;
   public Hand hand;
@@ -16,6 +25,8 @@ public Class Player{
     this.deck = input.deck;
     this.heroClass = input.heroClass;
     this.Hero = new Hero(this);
+    this.removedFromPlay = new RemovedFromPlay(this);
+    this.manaPool = new ManaPool(this);
   }
 
 //TODO: handle game loss

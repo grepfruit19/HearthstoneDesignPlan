@@ -1,0 +1,1 @@
+This package (Player) contains anything that is owned, controlled and used by a player.
