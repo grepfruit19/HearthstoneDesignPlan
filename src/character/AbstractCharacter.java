@@ -1,3 +1,5 @@
+package character;
+
 public class AbstractCharacter implements Character{
 
   Player player; //The player that owns this character.

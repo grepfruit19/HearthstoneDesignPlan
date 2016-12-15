@@ -1,3 +1,5 @@
+package card;
+
 //Heros can equip weapons to modify their damage.
 
 public class Weapon{

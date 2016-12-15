@@ -1,3 +1,4 @@
+package gamestate;
 
 public Class Player{
   public Game game;
@@ -6,6 +7,7 @@ public Class Player{
   public Board board;
   public Hero hero;
   public HeroClass heroClass;
+  public HeroPower heroPower;
   public ManaPool manaPool;
   public RemovedFromPlay removedFromPlay;
 
@@ -43,7 +45,7 @@ public Class Player{
       //Return the rest
     } else{
       /*Draw 4 cards, have the player select what cards to keep
-      Return the rest. 
+      Return the rest.
       */
     }
   }

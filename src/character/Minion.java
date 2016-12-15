@@ -1,4 +1,6 @@
-//Minions are cards that can be played, have a board presence
+package character;
+
+//Minions are cards that can be played and persist on the board.
 
 public Class Minion extends Card implements Character{
 
@@ -7,7 +9,7 @@ public Class Minion extends Card implements Character{
 
   void die(){
     //Should being removed from the board be a Minion method or a
-    //board method? Probably board. 
+    //board method? Probably board.
   }
 
   int attack(Character target){

@@ -1,3 +1,5 @@
+package character;
+
 public interface Character{
 
   //When health <= 0

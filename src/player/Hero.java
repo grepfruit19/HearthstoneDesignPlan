@@ -1,4 +1,7 @@
+package player;
 
+//This class handles the Hero character slot. Note that this does
+//not include the
 public class Hero extends AbstractCharacter implements Character{
   Player player;
   Weapon weapon;

@@ -1,3 +1,5 @@
+package gamestate;
+
 public class Game{
   Player one;
   Player two;

@@ -1,3 +1,5 @@
+package card;
+
 /*
 The abstract class Card encompasses all cards, including
 minions and spells.
