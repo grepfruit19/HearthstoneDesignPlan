@@ -6,6 +6,7 @@ public class Hero extends AbstractCharacter implements Character,TurnStartInterf
   Player player;
   Weapon weapon=null;
   int attackCount=0;
+  boolean this.windfury;
 
   Hero(Player player){
     this.player = player;
@@ -24,17 +25,12 @@ public class Hero extends AbstractCharacter implements Character,TurnStartInterf
     if (this.windFury==false){}
   }
 
-  void equipWeapon(Weapon weapon){
-    this.weapon = weapon
-  }
-
-  void unequipWeapon(){
-    this.weapon=null;
-  }
+  void equipWeapon(Weapon weapon){ this.weapon = weapon }
+  void unequipWeapon(){ this.weapon=null; }
 
 //Handles what needs to be done on a new turn.
   void onTurnStart(){
-
+    this.attackCount=0;
   }
 
 }

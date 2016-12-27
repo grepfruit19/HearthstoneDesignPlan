@@ -2,7 +2,7 @@ package character;
 
 //Minions are cards that can be played and persist on the board.
 
-public Class Minion extends Card implements Character{
+public class Minion extends Card implements Character{
 
   int attack;
   int health;

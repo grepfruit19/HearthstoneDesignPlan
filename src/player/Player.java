@@ -31,7 +31,7 @@ public Class Player{
 
 //TODO: handle game loss
   public void endGame(){
-    game.playerLost();
+    game.playerLost(this);
   }
 
   public void drawCard(){

@@ -31,7 +31,19 @@ public class Game{
   }
 
 //TODO: Figure out win/lose handling.
-  public void playerLost(){
-
+  public void playerLost(Player lost){
+    if (this.one==lost){
+      if (this.two.getHealth()<=0){ //draw
+        //handle loss for both players.
+      } else{
+        //handle loss for player one.
+      }
+    } else { //Player two sent loss signal.
+      if (this.one.getHealth()<=0){ //draw
+        //handle loss for both players.
+      } else {
+        //handle loss for player two.
+      }
+    }
   }
 }
