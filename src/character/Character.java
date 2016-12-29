@@ -5,11 +5,22 @@ public interface Character{
   //When health <= 0
   void die();
 
-  int attack(Character target);
+  default void attack(Character target){
+    Executor executor = player.getExecutor();
+    player.queueAction(new Attack(executor, this, target));
+  }
 
-  int getHit(int damage);
+  default getHit(int damage){
+    this.health = this.health - damage;
+    if (checkDead()){
+      this.die();
+    }
+  }
 
-  //I feel like there is a design pattern to handle attack and getHit
-  //Perhaps the Command pattern.
+  default boolean checkDead(){ if (this.health <= 0){ this.die(); } }
+
+  Player getPlayer();
+  int getHealth();
+  int getAttack();
 
 }

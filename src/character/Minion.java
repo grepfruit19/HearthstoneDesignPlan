@@ -2,8 +2,8 @@ package character;
 
 //Minions are cards that can be played and persist on the board.
 
-public class Minion extends Card implements Character{
-
+public abstract class Minion extends Card implements Character{
+  Player player;
   int attack;
   int health;
 
@@ -13,12 +13,11 @@ public class Minion extends Card implements Character{
   }
 
   int attack(Character target){
-
+    
   }
 
-  int getHit(int damage){
-    this.health = this.health - damage;
-    if (this.health<=0){ this.die(); }
+  abstract int getHit(int damage){
+
   }
 
 }

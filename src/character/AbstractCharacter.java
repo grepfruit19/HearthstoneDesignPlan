@@ -11,20 +11,15 @@ public class AbstractCharacter implements Character{
     this.player = player;
   }
 
-  abstract void die();
+  public abstract void die();
 
 //Deal damage to something.
-  int attack(Character target){
-    if (target.player!=player){
-      this.getHit(target.attack);
-      target.getHit(this.attack);
-    } else{
-      System.out.println("Error: Cannot attack friendly characters");
-    }
+  public void attack(Character target){
+    
   }
 
 //Take damage from something.
-  int getHit(int damage){
+  public void getHit(int damage){
     this.health = this.health - damage;
   }
 }

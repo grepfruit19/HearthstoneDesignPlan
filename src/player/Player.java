@@ -3,22 +3,22 @@ package gamestate;
 //This class corresponds to a player and all the entities that
 //they control.
 
-//TODO: Set up command pattern to handle queued actions.
-/*
-Maybe Player creates command objects and sends them to the command queue
-Command queue handles them one at a time.
-*/
-
 public Class Player{
-  public Game game;
-  public Hand hand;
-  public Deck deck;
-  public Board board;
-  public Hero hero;
-  public HeroClass heroClass;
-  public HeroPower heroPower;
-  public ManaPool manaPool;
-  public RemovedFromPlay removedFromPlay;
+  private Game game;
+
+  private Hand hand;
+  private Deck deck;
+  private Board board;
+  private RemovedFromPlay removedFromPlay;
+
+  private Hero hero;
+  private HeroClass heroClass;
+  private HeroPower heroPower;
+  private ManaPool manaPool;
+
+  //Command pattern members
+  private ActionQueue actionQueue;
+  private Executor executor;
 
   Player(Game game, GameStart input){
     this.game = game;
@@ -64,4 +64,14 @@ public Class Player{
   public void removeFromPlay(Card card){
     this.removedFromPlay.addCard(card);
   }
+
+  public void queueAction(Action action){
+    this.actionQueue.nextAction(action);
+  }
+
+  //=====Get methods ===========
+  public Executor getExecutor(){ return this.executor; }
+
+  //=====End Get methods========
+
 }
